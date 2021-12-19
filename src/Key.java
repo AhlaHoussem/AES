@@ -143,10 +143,10 @@ public class Key {
      * @return updated byte
      */
     private byte subBoxTransform(byte value) {
-        // 0000
+
         byte bUpper, bLower;
         bUpper = (byte) ((byte) (value >> 4) & 0x0f);
-        // TODO test the out of index case
+        // test the out of index case
         bLower = (byte) (value & 0x0f);
         SubByteBox subBox = new SubByteBox();
         return subBox.subBox[bUpper][bLower];

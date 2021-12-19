@@ -21,8 +21,8 @@ public class AES {
 
     public void runSimulation(String[] args) throws IOException {
 
-        String option = "d";// TODO change this args[0];
-        String mode = "ebc"; // TODO change this args[1];
+        String option = args[0];
+        String mode = args[1];
 
         InputOutput project = new InputOutput();
 
@@ -31,7 +31,7 @@ public class AES {
         ArrayList<String> providedPlaintext = project.textFileToArrayList(args[3]);
         providedPlaintext.removeAll(Collections.singleton(""));
 
-        // In case of decryption, the encrypted plaintext will be the one to decrypt. TODO encryption should be done first
+        // In case of decryption, the encrypted plaintext will be the one to decrypt.
         if (option.equals("d")){providedPlaintext = project.textFileToArrayList(args[4]);}
 
 

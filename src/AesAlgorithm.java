@@ -175,7 +175,6 @@ public class AesAlgorithm {
         this.debugging += "\nThe ciphertext : \n";
         this.debugging += printStringFromMatrix(state_add) + "\n";
 
-        // TODO create the step by step method
         return state;
     }
 
@@ -231,7 +230,7 @@ public class AesAlgorithm {
         // 0000
         byte bUpper, bLower;
         bUpper = (byte) ((byte) (value >> 4) & 0x0f);
-        // TODO tes the out of index case
+        // test the out of index case
         bLower = (byte) (value & 0x0f);
 
         return subBox[bUpper][bLower];
@@ -415,7 +414,7 @@ public class AesAlgorithm {
 
         state = addRoundKey(state, wordsKeyExpansion, 0);
 
-        String[][] state_addRound = byteArrToHexMatrix(state); //TODO xor it with iv vector
+        String[][] state_addRound = byteArrToHexMatrix(state); //xor it with iv vector
         this.debugging += "After addRoundKey(0) : \n";
         this.debugging += printStringFromMatrix(state_addRound) + "\n";
 
