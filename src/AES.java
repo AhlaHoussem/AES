@@ -21,8 +21,8 @@ public class AES {
 
     public void runSimulation(String[] args) throws IOException {
 
-        String option = args[0];// TODO change this args[0];
-        String mode = args[1]; // TODO change this args[1];
+        String option = "d";// TODO change this args[0];
+        String mode = "ebc"; // TODO change this args[1];
 
         InputOutput project = new InputOutput();
 
