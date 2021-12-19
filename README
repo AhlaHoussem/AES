@@ -1,0 +1,17 @@
+This is a clarification of the parameters args[] provided for the Main.java
+
+
+      the encryption process should be tested first.
+      Because the decryption will decrypt the content of the file created after the encyprtion.
+      Otherwise "file not found" exception will be thrown
+
+
+
+"e" or "d" : arg[0] : encryption or decryption of the plaintext
+"ecb" or "cbc" : args[1] : the mode of the process
+"path\\KeyFile" : args[2] : the path of the text file of the key
+"path\\InputFile" : args[3] : the path of the text file of the the input (plaintext)
+"path\\plaintext.enc" : args[4] : the path of the encrypted plaintext
+"path\\plaintext.enc.dec" : args[5] : the path of the decrypted cipher text. This file contents is the same of the input file.
+"path\\plaintext.enc.debugging" : args[6] : the path of the step by step debugging of the encryption process.
+"path\\plaintext.enc.dec.debugging" : args[7] : the path of the step by step debugging of the decryption process.
